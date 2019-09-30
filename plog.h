@@ -63,7 +63,7 @@ void log(const char * format, ...) {
         va_list vargs;
         va_start(vargs, format);
         set_thread_color(tid);
-        fprintf(stderr, "%lu: ", tid);
+        fprintf(stderr, "%lx: ", tid);
         reset_color();
         vfprintf(stderr, format, vargs);
         fprintf(stderr, ".\n");
